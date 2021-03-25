@@ -1,7 +1,7 @@
 import axios from 'axios';
 import joinURL from 'url-join';
 
-const SERVER_URL = 'http://localhost:3005';
+const SERVER_URL = 'http://localhost:8080';
 
 export const getUserData = async (credentials) => {
 	try {
@@ -22,7 +22,7 @@ export const addText = async (credentials, text) =>  {
 	try {
 		await axios({
 			method: 'POST',
-			url: joinURL(SERVER_URL, 'post-arr'),
+			url: joinURL(SERVER_URL, 'push-arr'),
 			data: {
 				email: credentials,
 				text
@@ -38,7 +38,7 @@ export const clearUserData = async (credentials) => {
 	try {
 		await axios({
 			method: 'DELETE',
-			url: joinURL(SERVER_URL, '/clear-data'),
+			url: joinURL(SERVER_URL, '/clear-all'),
 			data: credentials
 		})
 	} catch(err) {
@@ -51,7 +51,7 @@ export const deleteOne = async (credentials, index) => {
 	try {
 		await axios({
 			method: 'delete',
-			url: joinURL(SERVER_URL, 'delete-one'),
+			url: joinURL(SERVER_URL, 'clear-one'),
 			data: {
 				email: credentials,
 				index
