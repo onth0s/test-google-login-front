@@ -89,7 +89,8 @@ const Data = ({
 			</Menu></>}
 		</h2>
 
-		{userInfo.name && <><form onSubmit={handleSubmit}>
+		{userInfo.name && <>
+		<form onSubmit={handleSubmit}>
 			<TextField className="material-input"
 				id="standard-basic"
 				label="Some Text"

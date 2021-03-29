@@ -1,7 +1,8 @@
 import axios from 'axios';
 import joinURL from 'url-join';
 
-const SERVER_URL = 'http://localhost:8080';
+// const SERVER_URL = 'http://localhost:8080';
+const SERVER_URL = 'https://test-google-login-01.herokuapp.com/';
 
 export const getUserData = async (credentials) => {
 	try {
